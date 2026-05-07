@@ -13,7 +13,7 @@
       --bg: #f7f6f2;
       --paper: #fffefa;
       --paper-2: #f0f3f8;
-      --ink: #151515;
+      --ink: #1E2532;
       --muted: #6e6a63;
       --muted-2: #979187;
       --line: rgba(21, 21, 21, 0.13);
@@ -182,7 +182,7 @@
       font-size: clamp(54px, 5.8vw, 96px);
       line-height: 0.86;
       letter-spacing: -0.05em;
-      font-weight: 640;
+      font-weight: 540;
     }
 
     h1 .accent {
@@ -196,7 +196,7 @@
       margin-top: 34px;
       color: var(--muted);
       font-size: clamp(20px, 1.7vw, 26px);
-      line-height: 1.12;
+      line-height: 1.28;
       letter-spacing: -0.02em;
     }
 
@@ -339,17 +339,17 @@
     }
 
     h2 {
-      font-size: clamp(40px, 5.6vw, 82px);
+      font-size: clamp(40px, 5vw, 62px);
       line-height: 0.92;
-      letter-spacing: -0.075em;
-      font-weight: 620;
+      letter-spacing: -0.05em;
+      font-weight: 540;
     }
 
     .section-text {
       color: var(--muted);
-      font-size: 19px;
+      font-size: clamp(19px, 1.5vw, 22px);
       line-height: 1.28;
-      letter-spacing: -0.035em;
+      letter-spacing: 0em;
       max-width: 620px;
     }
 
@@ -364,8 +364,8 @@
     }
 
     .task-card {
-      min-height: 330px;
-      padding: 34px;
+      min-height: 350px;
+      padding: 30px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: rgba(255,254,250,.84);
@@ -383,19 +383,20 @@
 
     .num-brace {
       color: var(--accent);
-      font-size: 14px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      font-size: clamp(19px, 1.5vw, 22px);
     }
 
     .task-card h3,
     .structure-card h3,
     .stage-card h3,
     .tariff-card h3 {
-      font-size: 28px;
+      font-size: clamp(28px, 2.4vw, 36px);
       line-height: 0.98;
-      letter-spacing: -0.055em;
+      letter-spacing: 0em;
       font-weight: 580;
+      margin-bottom: clamp(18px, 1.4vw, 26px);
     }
 
     .task-card p,
@@ -405,6 +406,9 @@
     .notion-card p,
     .tariff-intro {
       color: var(--muted);
+      font-size: clamp(19px, 1.5vw, 22px);
+      letter-spacing: 0;
+      line-height: 1.28;
     }
 
     .structure-wrap {
