@@ -246,6 +246,7 @@
       font-size: 12px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      display: none;
     }
 
     .photo-slot--main {
@@ -339,7 +340,7 @@
 
     .section-num {
       color: var(--accent);
-      font-size: 14px;
+      font-size: clamp(14px, 1.25vw, 18px);
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
@@ -593,6 +594,7 @@
       padding-left: 18px;
       position: relative;
       line-height: 1.25;
+      font-size: clamp(18px, 1.5vw, 20px);
     }
 
     .stage-card li::before,
@@ -611,7 +613,7 @@
       padding-top: 0;
       border-top: 0;
       color: var(--ink);
-      font-size: 16px;
+      font-size: clamp(18px, 1.5vw, 20px);
       line-height: 1.28;
     }
 
