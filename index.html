@@ -354,7 +354,7 @@
 
     .section-text {
       color: var(--muted);
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
       line-height: 1.28;
       letter-spacing: 0em;
       max-width: 620px;
@@ -392,7 +392,7 @@
       color: var(--accent);
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
     }
 
     .task-card h3,
@@ -402,7 +402,7 @@
       line-height: 0.98;
       letter-spacing: 0em;
       font-weight: 580;
-      margin-bottom: clamp(18px, 1.4vw, 26px);
+      margin-bottom: clamp(15px, 1.4vw, 26px);
     }
 
     .stage-card h3 {
@@ -419,7 +419,7 @@
     .notion-card p,
     .tariff-intro {
       color: var(--muted);
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
       letter-spacing: 0;
       line-height: 1.28;
     }
@@ -594,7 +594,7 @@
       padding-left: 18px;
       position: relative;
       line-height: 1.25;
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
     }
 
     .stage-card li::before,
@@ -613,7 +613,7 @@
       padding-top: 0;
       border-top: 0;
       color: var(--ink);
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
       line-height: 1.28;
     }
 
@@ -747,7 +747,7 @@
       border-radius: 999px;
       padding: 10px 24px;
       color: var(--muted);
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
       text-transform: uppercase;
       letter-spacing: 0.04em;
       white-space: nowrap;
@@ -786,7 +786,7 @@
     .cost-line__title {
       font-weight: 560;
       letter-spacing: 0em;
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
     }
 
     .cost-line__desc {
@@ -803,7 +803,7 @@
       color: var(--ink);
       font-weight: 560;
       white-space: nowrap;
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
     }
 
     .tariff-total {
@@ -818,7 +818,7 @@
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      font-size: clamp(18px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.3vw, 20px);
     }
 
     .tariff-total strong {
@@ -848,7 +848,7 @@
     .compare-item span {
       display: block;
       color: var(--accent);
-      font-size: clamp(18px, 1.5vw, 20px);
+  font-size: clamp(15px, 1.3vw, 20px);
       letter-spacing: .04em;
       text-transform: uppercase;
       margin-bottom: 15px;
@@ -856,7 +856,7 @@
 
     .compare-item p {
       color: var(--muted);
-      font-size: clamp(18px, 1.5vw, 20px);
+  font-size: clamp(15px, 1.3vw, 20px);
       line-height: 1.18;
     }
 
@@ -894,14 +894,14 @@
       max-width: 360px;
       font-size: clamp(25px, 2.2vw, 35px);
       line-height: 1;
-      letter-spacing: -0.055em;
+      letter-spacing: 0em;
       font-weight: 590;
     }
 
     .important-card p {
       align-self: end;
       max-width: 520px;
-      font-size: clamp(18px, 1.5vw, 20px);
+  font-size: clamp(15px, 1.3vw, 20px);
       line-height: 1.3;
     }
 
@@ -959,7 +959,7 @@
     .final-copy p {
       max-width: 560px;
       color: rgba(16,32,51,.68);
-      font-size: clamp(20px, 1.75vw, 25px);
+      font-size: clamp(16px, 1.75vw, 25px);
       line-height: 1.18;
       letter-spacing: -0.045em;
     }
@@ -978,7 +978,7 @@
     .contact-card h3 {
       font-size: clamp(40px, 5vw, 66px);
       line-height: 0.95;
-      letter-spacing: -0.07em;
+      letter-spacing: -0.03em;
       font-weight: 620;
     }
 
@@ -1098,7 +1098,7 @@
     @media (max-width: 760px) {
       :root {
         --container: min(100% - 24px, 1180px);
-        --radius: 22px;
+        --radius: 12px;
       }
 
       body {
@@ -1106,6 +1106,15 @@
         background-size: auto, auto, 58px 58px, auto;
       }
 
+      .task-card {
+        min-height: 300px;
+        padding: 24px;
+      }
+
+      .tasks-grid {
+        gap: 12px;
+      }
+      
       .topbar__inner {
         grid-template-columns: 1fr auto;
         min-height: 66px;
@@ -1133,11 +1142,11 @@
       }
 
       h1 {
-        font-size: clamp(50px, 17vw, 84px);
+        font-size: clamp(40px, 13vw, 58px);
       }
 
       .hero__sub {
-        font-size: 21px;
+        font-size: clamp(18px, 1.5vw, 20px);
       }
 
       .tasks-grid,
@@ -1157,8 +1166,7 @@
 
       .photo-slot--small {
         width: 56%;
-        right: 6px;
-        bottom: 10px;
+  
       }
 
       .orbit {
@@ -1171,13 +1179,34 @@
         min-height: 420px;
       }
 
+      .final-copy {
+        min-height: 300px;
+        padding: 24px;
+      }
+
+      .photo-slot::before,
+      .final-copy::before {
+        inset: 12px;
+      }
+      
       .structure-card {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 34px;
+        border-radius: var(--radius);
+        padding: 24px 24px;
       }
 
       .important-card {
         gap: 28px;
+      }
+
+      .important-grid {
+        gap: 12px;
+      }
+
+      .important-card {
+        padding: 24px;
+        min-height: 260px;
       }
 
       .stages-grid {
@@ -1186,6 +1215,7 @@
 
       .stage-card {
         min-height: auto;
+        padding: 24px 24px;
       }
 
       .stage-copy {
@@ -1195,9 +1225,13 @@
       .tariff-card__head,
       .tariff-body,
       .notion-card,
-      .final-copy,
       .contact-card {
-        padding: 22px;
+        padding: 24px;
+      }
+
+      .notion-section,
+      .notion-points {
+        gap: 12px;
       }
 
       .tariff-card__head {
@@ -1594,7 +1628,7 @@
               <h3>Работаем по договору</h3>
               <span class="num-brace">{ 01 }</span>
             </div>
-            <p>Я оформлена официально и работаю по договору как самозанятая. Все условия сотрудничества закрепляем документально.</p>
+            <p>Я оформлена официально и&nbsp;работаю по договору как самозанятая. Все условия сотрудничества закрепляем документально.</p>
           </article>
 
           <article class="important-card">
@@ -1618,7 +1652,7 @@
               <h3>Сроки работ</h3>
               <span class="num-brace">{ 04 }</span>
             </div>
-            <p>Сроки работ четкие и будут прописаны в договоре. При начале сотрудничества будет выслан график работ, которого мы будем придерживаться.</p>
+            <p>Сроки работ четкие и&nbsp;будут прописаны в договоре. При начале сотрудничества будет выслан график работ, которого мы будем придерживаться.</p>
           </article>
         </div>
       </section>
@@ -1626,39 +1660,39 @@
       <section class="final reveal" aria-label="Контакты">
         <div class="final-copy">
           <div>
-            <span class="section-num">07 / Связь</span>
-            <h2 style="margin-top: 28px;">Буду рада сотрудничать</h2>
+            <span class="section-num"></span>
+            <h2>Буду рада сотрудничать</h2>
           </div>
-          <p>Напишите, какой из тарифов вам ближе, мы зафиксируем условия и перейдём к графику работ. 
-              Если ни один из форматов не подходит, то я готова обсудить пожелания и подобрать подходящее решение.</p>
+          <p>Напишите, какой из&nbsp;тарифов вам ближе, мы зафиксируем условия и&nbsp;перейдём к&nbsp;графику работ. 
+              Если ни один из форматов не&nbsp;подходит, то я готова обсудить пожелания и&nbsp;подобрать подходящее решение.</p>
         </div>
 
         <aside class="contact-card">
           <div>
             <span class="num-brace">контакты</span>
-            <h3 style="margin-top: 24px;">Полина</h3>
-            <p class="section-text" style="margin-top: 20px;">Дизайн и разработка сайтов на Tilda</p>
+            <h3 style="margin-top: 24px;">Полина Лесневская</h3>
+            <p class="section-text" style="margin-top: 20px;">Дизайн и&nbsp;разработка сайтов на&nbsp;Tilda</p>
           </div>
 
           <div>
             <div class="contact-list">
-              <a class="contact-link" href="https://t.me/your_username" target="_blank" rel="noopener">
+              <a class="contact-link" href="https://t.me/poliles_design" target="_blank" rel="noopener">
                 <span>Telegram</span>
-                <strong>@your_username</strong>
+                <strong>@poliles_design</strong>
                 <span class="arrow">↗</span>
               </a>
-              <a class="contact-link" href="https://vk.com/your_profile" target="_blank" rel="noopener">
+              <a class="contact-link" href="https://vk.com/dream_big_princess" target="_blank" rel="noopener">
                 <span>VK</span>
-                <strong>vk.com/your_profile</strong>
+                <strong>vk.com/dream_big_princess</strong>
                 <span class="arrow">↗</span>
               </a>
-              <a class="contact-link" href="mailto:yourmail@mail.ru">
+              <a class="contact-link" href="mailto:polinalsn@gmail.com">
                 <span>Email</span>
-                <strong>yourmail@mail.ru</strong>
+                <strong>polinalsn@gmail.com</strong>
                 <span class="arrow">↗</span>
               </a>
             </div>
-            <p class="footer-note">Обязательно пишите, если будут вопросы. Я на связи :)</p>
+            <p class="footer-note">Обязательно пишите, если будут вопросы. Я&nbsp;на&nbsp;связи :)</p>
           </div>
         </aside>
       </section>
