@@ -1,0 +1,1698 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Коммерческое предложение — B2B-лендинг для BY ME</title>
+  <meta name="description" content="Коммерческое предложение по созданию B2B-лендинга для BY ME" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --paper: #fffefa;
+      --paper-2: #f0f3f8;
+      --ink: #151515;
+      --muted: #6e6a63;
+      --muted-2: #979187;
+      --line: rgba(21, 21, 21, 0.13);
+      --line-strong: rgba(21, 21, 21, 0.22);
+      --accent: #5B7FBB;
+      --accent-dark: #315686;
+      --accent-soft: rgba(91, 127, 187, 0.13);
+      --radius: 28px;
+      --radius-sm: 18px;
+      --container: min(1180px, calc(100vw - 40px));
+      --shadow: 0 24px 80px rgba(29, 42, 62, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter Tight", Inter, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 7% 4%, rgba(91, 127, 187, 0.14), transparent 30vw),
+        radial-gradient(circle at 92% 12%, rgba(91, 127, 187, 0.10), transparent 24vw),
+        linear-gradient(90deg, rgba(21,21,21,.035) 1px, transparent 1px),
+        var(--bg);
+      background-size: auto, auto, 86px 86px, auto;
+      font-size: 17px;
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .noise {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 280 280' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 246, 242, 0.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar__inner {
+      width: var(--container);
+      margin: 0 auto;
+      min-height: 74px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topbar__label,
+    .topbar__date {
+      font-size: 12px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .topbar__date {
+      justify-self: end;
+    }
+
+    .topbar__logo {
+      min-height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 254, 250, 0.72);
+    }
+
+    .client-logo {
+      max-width: 140px;
+      max-height: 30px;
+      display: block;
+    }
+
+    .logo-fallback {
+      display: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    section {
+      position: relative;
+      width: var(--container);
+      margin: 0 auto;
+      padding: 104px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      align-items: end;
+      gap: clamp(28px, 6vw, 90px);
+      padding-top: 88px;
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      margin-bottom: 28px;
+    }
+
+    .kicker::before {
+      content: "";
+      width: 46px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(54px, 8.8vw, 126px);
+      line-height: 0.86;
+      letter-spacing: -0.075em;
+      font-weight: 640;
+    }
+
+    h1 .accent {
+      color: var(--accent);
+      font-style: italic;
+      font-weight: 520;
+    }
+
+    .hero__sub {
+      max-width: 600px;
+      margin-top: 34px;
+      color: var(--muted);
+      font-size: clamp(20px, 2.2vw, 30px);
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+    }
+
+    .hero__visual {
+      position: relative;
+      align-self: stretch;
+      min-height: 620px;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 18px;
+    }
+
+    .image-stack {
+      position: relative;
+      min-height: 500px;
+    }
+
+    .photo-slot {
+      position: absolute;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.55), rgba(91,127,187,.12)),
+        radial-gradient(circle at 72% 20%, rgba(91,127,187,.33), transparent 28%),
+        linear-gradient(135deg, #ede6dc, #f8f8f5 52%, #dce5f2);
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+
+    .photo-slot::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.65);
+      border-radius: calc(var(--radius) - 10px);
+      z-index: 1;
+    }
+
+    .photo-slot::after {
+      content: attr(data-label);
+      position: absolute;
+      left: 24px;
+      bottom: 22px;
+      z-index: 2;
+      color: rgba(21,21,21,.54);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .photo-slot--main {
+      inset: 10px 0 88px 40px;
+    }
+
+    .photo-slot--small {
+      width: 46%;
+      height: 38%;
+      right: 8%;
+      bottom: 24px;
+      background:
+        linear-gradient(135deg, rgba(91,127,187,.20), rgba(255,255,255,.48)),
+        linear-gradient(45deg, #f1eee7, #dfe8f6);
+    }
+
+    .orbit {
+      position: absolute;
+      left: 0;
+      top: 54%;
+      transform: translateY(-50%);
+      width: 156px;
+      height: 156px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(247,246,242,.82);
+      backdrop-filter: blur(10px);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .orbit span {
+      color: var(--accent);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      text-align: center;
+      line-height: 1.25;
+    }
+
+    .hero-note {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: rgba(255,254,250,.72);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .hero-note__num {
+      color: var(--accent);
+      font-size: 14px;
+      letter-spacing: 0.1em;
+    }
+
+    .hero-note p {
+      color: var(--muted);
+      max-width: 420px;
+      font-size: 18px;
+      line-height: 1.28;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      column-gap: 40px;
+      row-gap: 22px;
+      align-items: start;
+      margin-bottom: 56px;
+    }
+
+    .section-head h2,
+    .section-head .section-text {
+      grid-column: 2;
+    }
+
+    .section-head .section-num {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      padding-top: 0.8em;
+    }
+
+    .section-num {
+      color: var(--accent);
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: clamp(40px, 5.6vw, 82px);
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+      font-weight: 620;
+    }
+
+    .section-text {
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.28;
+      letter-spacing: -0.035em;
+      max-width: 620px;
+    }
+
+    .tasks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap: 28px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      overflow: visible;
+    }
+
+    .task-card {
+      min-height: 330px;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,250,.84);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 18px 60px rgba(29,42,62,.045);
+      transition: transform .45s ease, background .45s ease, border-color .45s ease;
+    }
+
+    .task-card:hover {
+      background: var(--paper);
+      transform: translateY(-4px);
+    }
+
+    .num-brace {
+      color: var(--accent);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .task-card h3,
+    .structure-card h3,
+    .stage-card h3,
+    .tariff-card h3 {
+      font-size: 28px;
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      font-weight: 580;
+    }
+
+    .task-card p,
+    .structure-card p,
+    .stage-card p,
+    .important-card p,
+    .notion-card p,
+    .tariff-intro {
+      color: var(--muted);
+    }
+
+    .structure-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .structure-aside {
+      min-height: 680px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: var(--paper);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .structure-aside::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 12%, rgba(91,127,187,.52), transparent 28%),
+        radial-gradient(circle at 78% 72%, rgba(91,127,187,.28), transparent 30%);
+      opacity: .88;
+    }
+
+    .structure-aside > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .structure-aside .big-number {
+      font-size: clamp(110px, 18vw, 230px);
+      line-height: .74;
+      letter-spacing: -0.11em;
+      color: rgba(255,255,255,.9);
+      font-weight: 520;
+    }
+
+    .structure-aside p {
+      max-width: 330px;
+      color: rgba(255,255,255,.68);
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .structure-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .structure-card {
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      padding: 28px 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255,254,250,.80);
+      transition: border-color .35s ease, transform .35s ease;
+    }
+
+    .structure-card:hover {
+      border-color: rgba(91,127,187,.45);
+      transform: translateX(5px);
+    }
+
+    .structure-card .index {
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      font-size: 14px;
+      padding-top: 5px;
+    }
+
+    .stages-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      overflow: visible;
+    }
+
+    .stage-card {
+      min-height: 230px;
+      padding: 34px 36px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255,254,250,.86);
+      display: grid;
+      grid-template-columns: minmax(120px, 0.26fr) minmax(360px, 1.12fr) minmax(280px, 0.86fr);
+      column-gap: clamp(32px, 5vw, 76px);
+      row-gap: 24px;
+      align-items: start;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(29,42,62,.035);
+    }
+
+    .stage-card {
+      --line-progress: 0;
+    }
+
+    .stage-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(91, 127, 187, 0.14);
+      pointer-events: none;
+    }
+
+    .stage-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(var(--line-progress));
+      transform-origin: left center;
+      will-change: transform;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .stage-label {
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      padding-top: 5px;
+      white-space: nowrap;
+    }
+
+    .stage-copy {
+      display: grid;
+      gap: 22px;
+      max-width: 520px;
+    }
+
+    .stage-copy h3 {
+      max-width: 420px;
+    }
+
+    .stage-card ul,
+    .tariff-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .stage-card li,
+    .tariff-card li {
+      color: var(--muted);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.25;
+    }
+
+    .stage-card li::before,
+    .tariff-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .62em;
+      width: 7px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .stage-result {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.28;
+    }
+
+    .notion-section {
+      display: grid;
+      grid-template-columns: minmax(420px, .92fr) minmax(480px, 1.08fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .notion-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      padding: 34px;
+      min-height: 390px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+    }
+
+    .notion-card h2 {
+      max-width: 520px;
+    }
+
+    .notion-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-content: stretch;
+      height: 100%;
+    }
+
+    .mini-point {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(255,255,255,.52);
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mini-point span {
+      display: block;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .mini-point p {
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.12;
+    }
+
+    .tariffs {
+      border-bottom: 0;
+    }
+
+    .tariff-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .tariff-card {
+      position: relative;
+      min-height: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,254,250,.92);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .tariff-card--accent {
+      background:
+        radial-gradient(circle at 90% 0%, rgba(91,127,187,.20), transparent 30%),
+        rgba(255,254,250,.96);
+      border-color: rgba(91,127,187,.34);
+    }
+
+    .tariff-card__head {
+      padding: 34px;
+      border-bottom: 1px solid var(--line);
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tariff-note {
+      width: fit-content;
+      margin-top: 24px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(91,127,187,.10);
+      color: var(--accent-dark);
+      font-size: 13px;
+      line-height: 1;
+      letter-spacing: .035em;
+    }
+
+    .tariff-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 14px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      background: rgba(255,255,255,.52);
+    }
+
+    .price {
+      margin-top: 24px;
+      font-size: clamp(58px, 7.4vw, 92px);
+      line-height: 0.9;
+      letter-spacing: -0.075em;
+      font-weight: 610;
+      color: var(--accent);
+    }
+
+    .price small {
+      font-size: .35em;
+      letter-spacing: -0.04em;
+      color: var(--muted);
+      font-weight: 480;
+    }
+
+    .tariff-body {
+      padding: 0 34px 34px;
+    }
+
+    .cost-line {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: baseline;
+    }
+
+    .cost-line__title {
+      font-weight: 560;
+      letter-spacing: -0.035em;
+      font-size: 19px;
+    }
+
+    .cost-line__desc {
+      display: block;
+      max-width: 460px;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 400;
+    }
+
+    .cost-line__price {
+      color: var(--ink);
+      font-weight: 580;
+      white-space: nowrap;
+    }
+
+    .tariff-total {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      padding-top: 28px;
+      align-items: baseline;
+    }
+
+    .tariff-total span {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+    }
+
+    .tariff-total strong {
+      color: var(--accent);
+      font-size: 38px;
+      letter-spacing: -0.055em;
+      line-height: 1;
+    }
+
+    .compare-strip {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--line);
+    }
+
+    .compare-item {
+      padding: 22px;
+      background: rgba(255,254,250,.78);
+      min-height: 128px;
+    }
+
+    .compare-item span {
+      display: block;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .compare-item p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.18;
+    }
+
+    .important-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      border: 0;
+      border-radius: 0;
+      overflow: visible;
+      background: transparent;
+    }
+
+    .important-card {
+      min-height: 300px;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255,254,250,.84);
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: 34px;
+      align-items: stretch;
+      box-shadow: 0 18px 50px rgba(29,42,62,.035);
+    }
+
+    .important-card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .important-card h3 {
+      max-width: 360px;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.055em;
+      font-weight: 590;
+    }
+
+    .important-card p {
+      align-self: end;
+      max-width: 520px;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .important-card a {
+      color: var(--accent-dark);
+      border-bottom: 1px solid rgba(91,127,187,.45);
+    }
+
+    .final {
+      min-height: 720px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      border-bottom: 0;
+      padding-bottom: 70px;
+    }
+
+    .final-copy {
+      border: 1px solid rgba(91,127,187,.26);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(255,255,255,.88), transparent 30%),
+        radial-gradient(circle at 86% 92%, rgba(91,127,187,.24), transparent 40%),
+        linear-gradient(135deg, #f7faff 0%, #eaf2fc 48%, #c9d9ee 100%);
+      color: #102033;
+      padding: 38px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .final-copy::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(255,255,255,.58);
+      border-radius: calc(var(--radius) - 10px);
+      background: linear-gradient(120deg, rgba(255,255,255,.18), transparent 42%);
+    }
+
+    .final-copy > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .final-copy h2 {
+      color: #102033;
+      max-width: 760px;
+    }
+
+    .final-copy p {
+      max-width: 560px;
+      color: rgba(16,32,51,.68);
+      font-size: 23px;
+      line-height: 1.18;
+      letter-spacing: -0.045em;
+    }
+
+    .contact-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h3 {
+      font-size: clamp(34px, 4.8vw, 64px);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      font-weight: 620;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .contact-link {
+      display: grid;
+      grid-template-columns: 110px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      min-height: 76px;
+      padding: 18px;
+      background: rgba(255,254,250,.82);
+      transition: background .3s ease, color .3s ease;
+    }
+
+    .contact-link:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .contact-link span:first-child {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .contact-link:hover span:first-child {
+      color: rgba(255,255,255,.72);
+    }
+
+    .contact-link strong {
+      font-size: 22px;
+      line-height: 1;
+      letter-spacing: -0.045em;
+      font-weight: 560;
+    }
+
+    .contact-link .arrow {
+      font-size: 22px;
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      color: var(--muted-2);
+      font-size: 13px;
+      line-height: 1.3;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(-50%) translateX(0) rotate(-1deg); }
+      50% { transform: translateY(-57%) translateX(10px) rotate(2deg); }
+    }
+
+    @media (max-width: 1100px) {
+      .hero,
+      .structure-wrap,
+      .notion-section,
+      .final {
+        grid-template-columns: 1fr;
+      }
+
+      .notion-points {
+        height: auto;
+      }
+
+      .hero__visual {
+        min-height: 560px;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .section-head h2,
+      .section-head .section-text,
+      .section-head .section-num {
+        grid-column: auto;
+        grid-row: auto;
+      }
+
+      .stage-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .tariff-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tariff-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --container: min(100% - 24px, 1180px);
+        --radius: 22px;
+      }
+
+      body {
+        font-size: 16px;
+        background-size: auto, auto, 58px 58px, auto;
+      }
+
+      .topbar__inner {
+        grid-template-columns: 1fr auto;
+        min-height: 66px;
+      }
+
+      .topbar__date {
+        display: none;
+      }
+
+      .topbar__label {
+        font-size: 11px;
+      }
+
+      .topbar__logo {
+        padding: 7px 12px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 58px;
+      }
+
+      h1 {
+        font-size: clamp(50px, 17vw, 84px);
+      }
+
+      .hero__sub {
+        font-size: 21px;
+      }
+
+      .tasks-grid,
+      .compare-strip,
+      .important-grid,
+      .notion-points {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__visual {
+        min-height: 440px;
+      }
+
+      .photo-slot--main {
+        inset: 0 0 72px 0;
+      }
+
+      .photo-slot--small {
+        width: 56%;
+        right: 6px;
+        bottom: 10px;
+      }
+
+      .orbit {
+        width: 126px;
+        height: 126px;
+        left: 10px;
+      }
+
+      .structure-aside {
+        min-height: 420px;
+      }
+
+      .structure-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .important-card {
+        gap: 28px;
+      }
+
+      .stages-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stage-card {
+        min-height: auto;
+      }
+
+      .stage-copy {
+        gap: 18px;
+      }
+
+      .tariff-card__head,
+      .tariff-body,
+      .notion-card,
+      .final-copy,
+      .contact-card {
+        padding: 22px;
+      }
+
+      .tariff-card__head {
+        min-height: auto;
+        gap: 28px;
+      }
+
+      .tariff-topline {
+        flex-wrap: wrap;
+      }
+
+      .cost-line {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .tariff-total {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-link {
+        grid-template-columns: 1fr auto;
+      }
+
+      .contact-link span:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media print {
+      html, body {
+        background: #fff;
+      }
+
+      .topbar {
+        position: static;
+      }
+
+      .noise {
+        display: none;
+      }
+
+      section {
+        break-inside: avoid;
+        width: calc(100% - 32px);
+        padding: 48px 0;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__label">Коммерческое предложение</div>
+        <a class="topbar__logo" href="#top" aria-label="К началу страницы">
+          <img class="client-logo" src="./.logo-by-me.svg" alt="BY ME" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" />
+          <span class="logo-fallback">BY ME</span>
+        </a>
+        <div class="topbar__date">07.05.2026</div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__content reveal">
+          <div class="kicker">Коммерческое предложение / BY ME × Tilda</div>
+          <h1>Коммерческое предложение по созданию <span class="accent">B2B-лендинга</span> для BY ME</h1>
+          <p class="hero__sub">Лендинг для свадебной флористики, который аккуратно презентует студию агентствам, объясняет формат сотрудничества и ведет к личному обсуждению проекта.</p>
+
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="image-stack" aria-hidden="true">
+            <div class="photo-slot photo-slot--main" data-label="место под фото проекта"></div>
+            <div class="photo-slot photo-slot--small" data-label="детали / цветы"></div>
+            <div class="orbit"><span>B2B<br>лендинг<br>для BY ME</span></div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="reveal" aria-label="Задачи лендинга">
+
+        <div class="section-head">
+          <div class="section-num">01 / Задачи</div>
+          <h2>Что должен решить лендинг</h2>
+          <p class="section-text">Задача страницы - не просто красиво показать цветы, а выстроить понятную B2B-презентацию для свадебных агентств: с акцентом на сервис, процесс и надежность.</p>
+        </div>
+
+        <div class="tasks-grid">
+          <article class="task-card">
+            <span class="num-brace">{ 01 }</span>
+            <div>
+              <h3>Презентовать BY ME как партнера</h3>
+              <p>Показать студию не только как флористов, а как команду, с которой агентству спокойно вести свадебный проект.</p>
+            </div>
+          </article>
+          <article class="task-card">
+            <span class="num-brace">{ 02 }</span>
+            <div>
+              <h3>Объяснить полный цикл услуг</h3>
+              <p>Разложить, за какие зоны отвечает команда: букет, церемония, банкет, welcome-зоны, инсталляции, логистика и монтаж.</p>
+            </div>
+          </article>
+          <article class="task-card">
+            <span class="num-brace">{ 03 }</span>
+            <div>
+              <h3>Довести до обращения</h3>
+              <p>Собрать страницу так, чтобы после кейсов, преимуществ и процесса пользователю было естественно перейти к обсуждению проекта.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="reveal" aria-label="Структура лендинга">
+        <div class="section-head">
+          <div class="section-num">02 / Структура</div>
+          <h2>Предлагаемая структура лендинга</h2>
+          <p class="section-text">В основе — уже подготовленная логика страницы. Она ведет пользователя от первого впечатления к пониманию услуг, формата работы и контакту.</p>
+        </div>
+
+        <div class="structure-wrap">
+          <div class="structure-list">
+            <article class="structure-card">
+              <span class="num-brace">{ 01 }</span>
+              <div><h3>Header / навигация</h3><p>Логотип, ссылки на ключевые разделы, кнопка для связи.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 02 }</span>
+              <div><h3>Первый экран</h3><p>Главный оффер, краткое описание и визуальная подача бренда.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 03 }</span>
+              <div><h3>О BY ME</h3><p>Короткое знакомство со студией, подходом и ощущением работы.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 04 }</span>
+              <div><h3>Что предлагаем</h3><p>Список услуг: букет, церемония, банкет, welcome, инсталляции, сопровождение.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 05 }</span>
+              <div><h3>Особая услуга</h3><p>Примерка букета с образом невесты как дополнительный акцент и отличие.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 06 }</span>
+              <div><h3>Кейсы</h3><p>Примеры оформлений, задачи проектов, теги, фотографии и краткие описания.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 07 }</span>
+              <div><h3>Партнерство</h3><p>Аргументы, почему агентству будет спокойно работать с BY ME.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 08 }</span>
+              <div><h3>Процесс работы</h3><p>Последовательность: погружение, решение, согласование, подготовка, реализация.</p></div>
+            </article>
+            <article class="structure-card">
+              <span class="num-brace">{ 09 }</span>
+              <div><h3>Финальный CTA / контакты</h3><p>Приглашение обсудить проект, мессенджер, почта, телефон и социальные сети.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal" aria-label="Этапы работ">
+        <div class="section-head">
+          <div class="section-num">03 / Этапы</div>
+          <h2>Этапы работ</h2>
+          <p class="section-text">Работа идет последовательно: сначала фиксируем смысл и структуру, затем визуал, сборку на Tilda и итоговую подготовку страницы.</p>
+        </div>
+
+        <div class="stages-grid">
+          <article class="stage-card">
+            <span class="stage-label">этап 01</span>
+            <div class="stage-copy">
+              <h3>Анализ и структура</h3>
+              <ul>
+                <li>изучение сферы и конкурентов;</li>
+                <li>анализ визуальной подачи и структуры;</li>
+                <li>определение логики страницы и CTA.</li>
+              </ul>
+            </div>
+            <div class="stage-result"><strong>Результат:</strong> понятная структура лендинга и список смысловых блоков.</div>
+          </article>
+
+          <article class="stage-card">
+            <span class="stage-label">этап 02</span>
+            <div class="stage-copy">
+              <h3>Прототип</h3>
+              <ul>
+                <li>расположение блоков и основных элементов;</li>
+                <li>распределение текстов, фото и кнопок;</li>
+                <li>проверка логики страницы до дизайна.</li>
+              </ul>
+            </div>
+            <div class="stage-result"><strong>Результат:</strong> черновой скелет страницы, по которому можно дорабатывать дизайн.</div>
+          </article>
+
+          <article class="stage-card">
+            <span class="stage-label">этап 03</span>
+            <div class="stage-copy">
+              <h3>Дизайн-доработка</h3>
+              <ul>
+                <li>работа с композицией, сеткой и ритмом;</li>
+                <li>оформление карточек, кейсов и акцентов;</li>
+                <li>подготовка визуальной логики для Tilda.</li>
+              </ul>
+            </div>
+            <div class="stage-result"><strong>Результат:</strong> цельное визуальное направление будущего лендинга.</div>
+          </article>
+
+          <article class="stage-card">
+            <span class="stage-label">этап 04</span>
+            <div class="stage-copy">
+              <h3>Верстка на Tilda</h3>
+              <ul>
+                <li>сборка desktop-версии;</li>
+                <li>мобильная адаптация блоков;</li>
+                <li>кнопки, ссылки, якоря, базовая анимация;</li>
+                <li>проверка отображения и визуальная полировка.</li>
+              </ul>
+            </div>
+            <div class="stage-result"><strong>Результат:</strong> рабочая страница на Tilda, готовая к финальному согласованию.</div>
+          </article>
+
+          <article class="stage-card">
+            <span class="stage-label">этап 05</span>
+            <div class="stage-copy">
+              <h3>Финализация</h3>
+              <ul>
+                <li>внесение согласованных правок;</li>
+                <li>проверка ссылок, кнопок и адаптива;</li>
+                <li>подготовка страницы к публикации.</li>
+              </ul>
+            </div>
+            <div class="stage-result"><strong>Результат:</strong> финальная версия лендинга для публикации.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="reveal" aria-label="Дополнительно">
+        <div class="notion-section">
+          <div class="notion-card">
+            <span class="section-num">04 / Дополнительно</span>
+            <h2>Ведение проекта в Notion</h2>
+            <p class="section-text">Если вам будет удобно, я могу вести проект в базе данных в Notion: там можно собрать материалы, статусы, ссылки, комментарии и этапы работ в одном месте.</p>
+          </div>
+
+          <div class="notion-points">
+            <div class="mini-point"><span>01</span><p>единое место для материалов и ссылок</p></div>
+            <div class="mini-point"><span>02</span><p>понятные статусы по этапам работы</p></div>
+            <div class="mini-point"><span>03</span><p>комментарии и правки без потери контекста</p></div>
+            <div class="mini-point"><span>04</span><p>прозрачный график и список задач</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tariffs reveal" aria-label="Тарифы">
+        <div class="section-head">
+          <div class="section-num">05 / Тарифы</div>
+          <h2>Варианты разработки</h2>
+          <p class="section-text">Оба варианта включают полный путь от уже выполненной аналитики и прототипа до сборки страницы на Tilda. Разница — в глубине дизайн-доработки.</p>
+        </div>
+
+        <div class="tariff-grid">
+          <article class="tariff-card">
+            <div class="tariff-card__head">
+              <div>
+                <div class="tariff-topline">
+                  <span class="num-brace">{ тариф 01 }</span>
+                  <span class="pill">8-10 рабочих дней</span>
+                </div>
+                <h3>Разработка по готовому прототипу</h3>
+                <p class="tariff-intro" style="margin-top: 22px;">Подходит, если сохраняем текущую структуру и визуальное направление прототипа, аккуратно дорабатываем дизайн и собираем страницу на Tilda.</p>
+                <div class="tariff-note">Включено 2 итерации правок на каждый этап</div>
+              </div>
+              <div class="price">60 000 <small>₽</small></div>
+            </div>
+
+            <div class="tariff-body">
+              <div class="cost-line">
+                <div><span class="cost-line__title">Анализ сферы и конкурентов</span><span class="cost-line__desc">Изучение ниши, похожих проектов, структуры конкурентов и визуальных решений.</span></div>
+                <strong class="cost-line__price">7 000 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Составление структуры лендинга</span><span class="cost-line__desc">Логика страницы, порядок блоков, основные смыслы, CTA и пользовательский сценарий.</span></div>
+                <strong class="cost-line__price">5 000 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Создание прототипа</span><span class="cost-line__desc">Черновая структура страницы: блоки, текстовые зоны, изображения и ключевые акценты.</span></div>
+                <strong class="cost-line__price">8 500 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Доработка дизайна по прототипу</span><span class="cost-line__desc">Композиция, отступы, сетки, карточки, акценты и декоративные элементы.</span></div>
+                <strong class="cost-line__price">9 000 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Верстка на Tilda</span><span class="cost-line__desc">Сборка лендинга, мобильная адаптация, ссылки, якоря, базовая анимация, проверка отображения и полировка.</span></div>
+                <strong class="cost-line__price">30 500 ₽</strong>
+              </div>
+              <div class="tariff-total"><span>Итого</span><strong>60 000 ₽</strong></div>
+            </div>
+          </article>
+
+          <article class="tariff-card tariff-card--accent">
+            <div class="tariff-card__head">
+              <div>
+                <div class="tariff-topline">
+                  <span class="num-brace">{ тариф 02 }</span>
+                  <span class="pill">11-13 рабочих дней</span>
+                </div>
+                <h3>Усиленная дизайн-доработка</h3>
+                <p class="tariff-intro" style="margin-top: 22px;">Подходит, если хочется сильнее доработать визуальную часть: композиции блоков, подачу услуг и кейсов, декоративные элементы и мобильную версию.</p>
+                <div class="tariff-note">Включено 2 итерации правок на каждый этап</div>
+              </div>
+              <div class="price">75 000 <small>₽</small></div>
+            </div>
+
+            <div class="tariff-body">
+              <div class="cost-line">
+                <div><span class="cost-line__title">Анализ сферы и конкурентов</span><span class="cost-line__desc">Изучение ниши, похожих проектов, структуры конкурентов и визуальных решений.</span></div>
+                <strong class="cost-line__price">7 000 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Составление структуры лендинга</span><span class="cost-line__desc">Логика страницы, порядок блоков, основные смыслы, CTA и пользовательский сценарий.</span></div>
+                <strong class="cost-line__price">5 000 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Создание первичного прототипа</span><span class="cost-line__desc">Черновая структура страницы: блоки, текстовые зоны, изображения и ключевые акценты.</span></div>
+                <strong class="cost-line__price">8 500 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Дополнительная переработка прототипа</span><span class="cost-line__desc">Уточнение отдельных блоков, перестройка композиции и усиление визуального ритма.</span></div>
+                <strong class="cost-line__price">3 500 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Усиленная дизайн-доработка</span><span class="cost-line__desc">Более глубокая работа с композициями, сетками, карточками, акцентами, подачей услуг и кейсов.</span></div>
+                <strong class="cost-line__price">18 500 ₽</strong>
+              </div>
+              <div class="cost-line">
+                <div><span class="cost-line__title">Верстка на Tilda</span><span class="cost-line__desc">Сборка лендинга, мобильная адаптация, ссылки, якоря, базовая анимация, проверка отображения и полировка.</span></div>
+                <strong class="cost-line__price">32 500 ₽</strong>
+              </div>
+              <div class="tariff-total"><span>Итого</span><strong>75 000 ₽</strong></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="compare-strip" aria-label="Краткое сравнение тарифов">
+          <div class="compare-item"><span>базовый вариант</span><p>идем по утвержденному прототипу и аккуратно усиливаем визуал</p></div>
+          <div class="compare-item"><span>усиленный вариант</span><p>глубже перерабатываем дизайн, композиции и подачу ключевых блоков</p></div>
+          <div class="compare-item"><span>в обоих тарифах</span><p>включены согласования по этапам и 2 итерации правок на каждый этап</p></div>
+        </div>
+      </section>
+
+      <section class="reveal" aria-label="Что важно знать">
+        <div class="section-head">
+          <div class="section-num">06 / Формально</div>
+          <h2>Что важно знать</h2>
+          <p class="section-text">Основные условия сотрудничества, которые помогают заранее зафиксировать формат, сроки и дополнительные расходы.</p>
+        </div>
+
+        <div class="important-grid">
+          <article class="important-card">
+            <div class="important-card__top">
+              <h3>Работаем по договору</h3>
+              <span class="num-brace">{ 01 }</span>
+            </div>
+            <p>Я оформлена официально и работаю по договору как самозанятая. Все условия сотрудничества закрепляем документально.</p>
+          </article>
+
+          <article class="important-card">
+            <div class="important-card__top">
+              <h3>Оплата Tilda Publishing</h3>
+              <span class="num-brace">{ 02 }</span>
+            </div>
+            <p>Аккаунт на Tilda на один сайт стоит 750 ₽/мес или 6000 ₽/год. Стоимость подписки не входит в стоимость услуг. <a href="https://tilda.cc/ru/pricing/" target="_blank" rel="noopener">Подробнее о тарифах Tilda</a>.</p>
+          </article>
+
+          <article class="important-card">
+            <div class="important-card__top">
+              <h3>Правки</h3>
+              <span class="num-brace">{ 03 }</span>
+            </div>
+            <p>В оба тарифа входят 2 итерации правок на каждый этап. Если этого количества будет недостаточно, дополнительные правки оплачиваются отдельно — 2000 ₽/час.</p>
+          </article>
+
+          <article class="important-card">
+            <div class="important-card__top">
+              <h3>Сроки работ</h3>
+              <span class="num-brace">{ 04 }</span>
+            </div>
+            <p>Сроки работ четкие и будут прописаны в договоре. При начале сотрудничества будет выслан график работ, которого мы будем придерживаться.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final reveal" aria-label="Контакты">
+        <div class="final-copy">
+          <div>
+            <span class="section-num">07 / Связь</span>
+            <h2 style="margin-top: 28px;">Буду рада сотрудничать</h2>
+          </div>
+          <p>Если формат и один из тарифов подходят, следующим шагом можно согласовать вариант разработки, зафиксировать условия и перейти к графику работ.</p>
+        </div>
+
+        <aside class="contact-card">
+          <div>
+            <span class="num-brace">контакты</span>
+            <h3 style="margin-top: 24px;">Полина</h3>
+            <p class="section-text" style="margin-top: 20px;">Дизайн и разработка лендингов на Tilda</p>
+          </div>
+
+          <div>
+            <div class="contact-list">
+              <a class="contact-link" href="https://t.me/your_username" target="_blank" rel="noopener">
+                <span>Telegram</span>
+                <strong>@your_username</strong>
+                <span class="arrow">↗</span>
+              </a>
+              <a class="contact-link" href="https://vk.com/your_profile" target="_blank" rel="noopener">
+                <span>VK</span>
+                <strong>vk.com/your_profile</strong>
+                <span class="arrow">↗</span>
+              </a>
+              <a class="contact-link" href="mailto:yourmail@mail.ru">
+                <span>Email</span>
+                <strong>yourmail@mail.ru</strong>
+                <span class="arrow">↗</span>
+              </a>
+            </div>
+            <p class="footer-note">Контакты можно заменить на актуальные перед отправкой клиенту.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const stageGrid = document.querySelector('.stages-grid');
+    const stageCards = Array.from(document.querySelectorAll('.stage-card'));
+    let ticking = false;
+
+    const clamp = (value, min = 0, max = 1) => Math.min(Math.max(value, min), max);
+    const smoothStep = (value) => value * value * (3 - 2 * value);
+
+    function updateStageLines() {
+      if (!stageGrid || !stageCards.length) {
+        ticking = false;
+        return;
+      }
+
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const rect = stageGrid.getBoundingClientRect();
+
+      /*
+        Общий прогресс привязан к скроллу внутри блока этапов.
+        Сначала заполняется первая линия, затем вторая и так далее.
+        При скролле вверх прогресс уменьшается в обратном порядке.
+      */
+      const startPoint = viewportHeight * 0.78;
+      const endPoint = viewportHeight * 0.28;
+      const scrollLength = rect.height + startPoint - endPoint;
+      const totalProgress = clamp((startPoint - rect.top) / scrollLength);
+      const segments = stageCards.length;
+
+      stageCards.forEach((card, index) => {
+        const rawProgress = clamp(totalProgress * segments - index);
+        const easedProgress = smoothStep(rawProgress);
+        card.style.setProperty('--line-progress', easedProgress.toFixed(4));
+      });
+
+      ticking = false;
+    }
+
+    function requestStageUpdate() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateStageLines);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', requestStageUpdate, { passive: true });
+    window.addEventListener('resize', requestStageUpdate);
+    window.addEventListener('load', requestStageUpdate);
+    requestStageUpdate();
+  </script>
+</body>
+</html>
