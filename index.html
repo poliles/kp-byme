@@ -396,13 +396,19 @@
 
     .task-card h3,
     .structure-card h3,
-    .stage-card h3,
     .tariff-card h3 {
       font-size: clamp(25px, 2.2vw, 35px);
       line-height: 0.98;
       letter-spacing: 0em;
       font-weight: 580;
       margin-bottom: clamp(18px, 1.4vw, 26px);
+    }
+
+    .stage-card h3 {
+      font-size: clamp(25px, 2.2vw, 35px);
+      line-height: 0.98;
+      letter-spacing: 0em;
+      font-weight: 580;
     }
 
     .task-card p,
@@ -1299,21 +1305,21 @@
         <div class="tasks-grid">
           <article class="task-card">
             <span class="num-brace">{ 01 }</span>
-            <div>
+            <div class="task-card-info">
               <h3>Презентовать BY ME как партнера</h3>
               <p>Показать студию не только как флористов, а как команду, с которой агентству спокойно вести свадебный проект.</p>
             </div>
           </article>
           <article class="task-card">
             <span class="num-brace">{ 02 }</span>
-            <div>
+            <div class="task-card-info">
               <h3>Объяснить полный цикл услуг</h3>
               <p>Разложить, за какие зоны отвечает команда: букет, церемония, банкет, welcome-зоны, инсталляции, логистика и монтаж.</p>
             </div>
           </article>
           <article class="task-card">
             <span class="num-brace">{ 03 }</span>
-            <div>
+            <div class="task-card-info">
               <h3>Довести до обращения</h3>
               <p>Собрать страницу так, чтобы после кейсов, преимуществ и процесса пользователю было естественно перейти к обсуждению проекта.</p>
             </div>
